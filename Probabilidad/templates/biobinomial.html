@@ -1,0 +1,39 @@
+{% import 'bootstrap/wtf.html' as wtf %}
+{% extends 'layoutbinomial.html' %}
+
+{% block body %}
+
+<div id="put-overflow" class="w-100">
+    <section class="py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-8">
+                    <br>
+                    <p class="h3 font-weight-bold mb-0">BIBLIOGRAFÍA: DISTRIBUCIÓN BINOMIAL </p>
+                </div>
+            </div>
+            <hr color="black" size="3">
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="h5"><sup class="h6">[1]</sup>Briega, R. E. (29 de Junio de 2016). relopezbriega.github.io. Obtenido de https://relopezbriega.github.io/blog/2016/06/29/distribuciones-de-probabilidad-con-python/</p>
+                    <br>
+                    <p class="h5"><sup class="h6">[2]</sup>MiniTab. (2019). Minitab. Obtenido de https://support.minitab.com/es-mx/minitab/18/help-and-how-to/probability-distributions-and-random-data/supporting-topics/distributions/binomial-distribution/</p>
+                    <br>
+                    <p class="h5"><sup class="h6">[3]</sup>Sanjuán, F. J. (25 de Julio de 2020). Economipedia. Obtenido de https://economipedia.com/definiciones/distribucion-binomial.html</p>
+                    <br>
+                    <p class="h5"><sup class="h6">[4]</sup>Wackerly, D. D., Mendenhall III, W., & Scheaffer, R. L. (2009). Estadística Matemática con Aplicaciones. México D.F: Cengage Learning Editores S.A.</p>
+                </div>
+            </div>
+            <br>
+            <p><i> desarrollado por - Juan Camilo Ramírez Rátiva 20181020089 </i></p>
+            <p><i> Universidad Distrital Francisco José de Caldas </i></p>
+        </div>
+    </section>
+</div>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+{% endblock %}

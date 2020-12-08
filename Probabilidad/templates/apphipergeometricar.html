@@ -1,0 +1,81 @@
+{% import 'bootstrap/wtf.html' as wtf %}
+{% extends 'layouthipergeometrica.html' %}
+
+{% block body %}
+
+<div id="put-overflow" class="w-100">
+    <section class="py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-8">
+                    <br>
+                    <p class="h3 font-weight-bold mb-0">DISTRIBUCIÓN HIPERGEOMÉTRICA </p>
+                </div>
+            </div>
+            <hr color="black" size="3">
+            <p><i> desarrollado por - Juan Camilo Ramírez Rátiva 20181020089 </i></p>
+            <p><i> Universidad Distrital Francisco José de Caldas </i></p>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="container">
+                        <p class="h5">La probabilidad del evento es:</p>
+                        <p class= "h4"> {{ result.0 }} </p>
+                    </div>
+                    <hr color="black" size="3">
+                    <div class="container">
+                        <p class="h5">En %:</p>
+                        <p class= "h4"> {{ result.1 }} % </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <p> P: probabilidad de que pase </p>
+                    <p> Q: probabilidad de que no pase</p>
+                    <div class="ct-chart ct-perfect-fourth"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script>
+
+    window.sr = ScrollReveal();
+         sr.reveal('.body-profile',{
+             duration: 1000,
+             origin: 'bottom'
+         });
+
+</script>
+<script>
+
+    var getData = $.get('/Probabilidad/data');
+
+    getData.done(function(results){
+        var data = {
+            labels: ['P', 'Q'],
+            series: [
+                results.results
+            ]
+        };
+
+        var options = {
+            width: 400,
+            height: 250,
+            seriesBarDistance: 10,
+            reverseData: true,
+            horizontalBars: true,
+            axisY: {
+                offset: 70
+            }
+        }
+
+        var myChart = new Chartist.Bar('.ct-chart', data, options);
+    });
+</script>
+    
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% import 'bootstrap/wtf.html' as wtf %}
+{% extends 'layouthipergeometrica.html' %}
+
+{% block body %}
+
+<div id="put-overflow" class="w-100">
+    <section class="py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-8">
+                    <br>
+                    <p class="h3 font-weight-bold mb-0">TEORÍA: DISTRIBUCIÓN HIPERGEOMÉTRICA</p>
+                </div>
+            </div>
+            <hr color="black" size="3">
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-11">
+                    <p class="h3"><strong>¿Qué es?<sup class="h6">[1]</sup></strong></p>
+                    <p class="h5" align="justify">La distribución hipergeométrica se considera una distribución de probabilidad discreta que interpreta el numero de eventos en una muestra de tamaño constante, es decir, cuando se conoce el numero total de elementos en la poblacional de la cual proviene la muestra. Los resultados de los ensayos fluctúan en dos opciones siempre, éxito o fracaso.</p>
+                    <br>
+                    <p class="h3"><strong>Función de probabilidad hipergeométrica</strong></p>
+                    <p class="h5" align="justify">Para un experimento de distribución hipergeométrica, sea p la probabilidad de un éxito y 1-p la probabilidad de un fracaso en un solo ensayo, entonces la probabilidad de obtener y éxitos en n ensayos, está dada por la función de probabilidad P (Y = y)</p>
+                    $$ p(y) = \frac{\binom{r}{y}\binom{N - r}{n - y}}{\binom{N}{n}}$$
+                    <p class="h3"><strong>Características</strong><sup class="h6">[2]</sup></p>
+                    <ul>
+                        <li><p class="h5" align="justify">Cuando se elige un elemento de la población, no se puede volver a elegir, por lo tanto, la probabilidad de que un elemento sea seleccionado aumenta con cada ensayo, presuponiendo que aún no haya sido seleccionado.</p></li>
+                        <li><p class="h5" align="justify">La distribución hipergeométrica se define por tres parámetros: tamaño de la población, conteo de eventos en la población y tamaño de la muestra.</p></li>
+                        <li><p class="h5" align="justify">El proceso consta de n pruebas, separadas o separables de entre un conjunto de N pruebas posibles.</p></li>
+                        <li><p class="h5" align="justify">Cada una de las pruebas puede dar únicamente dos resultados mutuamente excluyentes, éxito o fracaso.</p></li>
+                    </ul>
+                    <br>
+                    <p class="h3"><strong>Aplicaciones</strong><sup class="h6">[3]</sup></p>
+                    <p class="h5" align="justify">La distribución hipergeométrica se aplica para muestras obtenidas de poblaciones relativamente pequeñas, sin reemplazo. Por ejemplo, cuando necesitamos calcular la prueba exacta de Fisher para probar la diferencia entre dos proporciones y en muestreos de aceptación por atributos cuando se toman muestras de un lote aislado de tamaño finito.</p>
+                    <br>
+                </div>
+            </div>
+            <p><i> desarrollado por - Juan Camilo Ramírez Rátiva 20181020089 </i></p>
+            <p><i> Universidad Distrital Francisco José de Caldas </i></p>
+        </div>
+    </section>
+</div>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+{% endblock %}

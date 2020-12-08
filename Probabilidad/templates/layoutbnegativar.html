@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="gb18030">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <title>I O N J C</title>
+    
+    <!-- GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main1.css') }}">
+    
+    <!-- Los iconos tipo Solid de Fontawesome-->
+    <script src="https://kit.fontawesome.com/d70f14a51a.js" crossorigin="anonymous"></script>
+
+    <!-- JS: Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Canvas -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body>
+    <div class="d-flex">
+        <div id="sidebar-content" class="bg-primary">
+            <br>
+            <div class="logo py-4">
+                <a href="/" class="h3 nav-link text-light" >I O N J C</a>
+            </div>
+            <div class="menu">
+                <div class="container">
+                    <a class="nav-link nav-outline-primary text-light p-3" href="/Probabilidad/bnegativa"><i class="fab fa-medapps mr-2 lead"></i> Aplicación </a>
+                    <a class="nav-link nav-outline-primary text-light p-3" href="/Probabilidad/teobnegativa"><i class="fas fa-info-circle mr-2 lead"></i> Teoría </a>
+                    <a class="nav-link nav-outline-primary text-light p-3" href="/Probabilidad/biobnegativa"><i class="fas fa-file-alt mr-2 lead"></i> Biografía </a>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown w-100">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-grey">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse " id="navbarNav">
+                        <ul class="nav">
+                            <li class="nav-item">
+                              <a class="nav-link active  text-light" href="/Probabilidad">Binomial</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active  text-light" href="/Probabilidad/bnegativa">Binomial negativa</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active  text-light" href="/Probabilidad/geometrica">Geométrica</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active  text-light" href="/Probabilidad/hipergeometrica">Hipergeométrica</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active  text-light" href="/Probabilidad/poisson">Poisson</a>
+                            </li>
+                          </ul>
+                    </div>
+                </div>
+            </nav>
+            {% block body %}
+
+            {% endblock %}
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+    
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+<script src="static/js/skroll.js"></script>
+<script type="text/javascript">
+    var s = skrollr.init();
+</script>
+</html>

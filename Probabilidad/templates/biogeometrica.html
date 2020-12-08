@@ -1,0 +1,38 @@
+{% import 'bootstrap/wtf.html' as wtf %}
+{% extends 'layoutgeometrica.html' %}
+
+{% block body %}
+
+<div id="put-overflow" class="w-100">
+    <section class="py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-8">
+                    <br>
+                    <p class="h3 font-weight-bold mb-0">BIBLIOGRAFÍA: DISTRIBUCIÓN GEOMÉTRICA</p>
+                </div>
+            </div>
+            <hr color="black" size="3">
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="h5"><sup class="h6">[1]</sup>Universidad de Valencia. (2020). uv.es. Obtenido de https://www.uv.es/ceaces/base/modelos%20de%20probabilidad/geometrica.htm</p>
+                    <br>
+                    <p class="h5"><sup class="h6">[2]</sup>Wackerly, D. D., Mendenhall III, W., & Scheaffer, R. L. (2009). Estadística Matemática con Aplicaciones. México D.F: Cengage Learning Editores S.A.</p>
+                    <br>
+                    <p class="h5"><sup class="h6">[3]</sup>Wikipedia. (16 de Noviembre de 2020). Wikipedia.org. Obtenido de https://es.wikipedia.org/wiki/Distribuci%C3%B3n_geom%C3%A9trica</p>
+                    <br>
+                </div>
+            </div>
+            <br>
+            <p><i> desarrollado por - Juan Camilo Ramírez Rátiva 20181020089 </i></p>
+            <p><i> Universidad Distrital Francisco José de Caldas </i></p>
+        </div>
+    </section>
+</div>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+{% endblock %}

@@ -1,0 +1,63 @@
+:root {
+    --primary: #34495e;
+    --light: #000000;
+    --grey: #485460;
+}
+
+body {
+    overflow: hidden;
+    background-color: #fdfdff;
+}
+
+.bg-grey {background: var(--grey) !important;}
+.bg-light {background: var(--light) !important;}
+.bg-primary {background-color: var(--primary) !important;}
+
+#oscuro a:hover{
+    background: #3D3D3D;
+    color: #FFFFFF;
+}
+
+#sidebar-content {
+    min-height: 100vh;
+}
+
+#sidebar-content .logo{
+    padding: .875rem 1.25rem;
+    text-decoration: none;
+}
+
+#sidebar-content .menu{
+    width: 15rem;
+}
+
+#put-overflow {
+    overflow: auto;
+    height: 576px;
+}
+
+#put-overflowx {
+    position: absolute;
+    overflow-x: auto;
+    width: 100%;
+    padding-bottom: 100%;
+}
+
+.stat {
+    border-right: 1px solid var(--light);
+}
+
+@media(max-width:990px){
+    #put-overflow{
+        overflow: auto;
+        height: 400px;
+    }
+}
+
+@media(max-width:450px){
+    #rpx{
+        display: none !important;
+    }
+}
+
+

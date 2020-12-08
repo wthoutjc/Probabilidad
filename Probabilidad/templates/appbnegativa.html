@@ -1,0 +1,83 @@
+{% import 'bootstrap/wtf.html' as wtf %}
+{% extends 'layoutbnegativar.html' %}
+
+{% block body %}
+
+<div id="put-overflow" class="w-100">
+    <section class="py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-8">
+                    <br>
+                    <p class="h3 font-weight-bold mb-0">DISTRIBUCIÓN BINOMIAL NEGATIVA </p>
+                </div>
+            </div>
+            <hr color="black" size="3">
+            <p><i> desarrollado por - Juan Camilo Ramírez Rátiva 20181020089 </i></p>
+            <p><i> Universidad Distrital Francisco José de Caldas </i></p>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    {%  with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+                    <form action="/Probabilidad/bnegativa" method="POST" class="col-12">
+                        <div class="form-group">
+                            {{ form.hidden_tag() }}
+                            {{ wtf.form_field(form.y) }}
+                            {{ wtf.form_field(form.r) }}
+                            {{ wtf.form_field(form.p) }}
+                            <button type="submit" class="btn btn-dark btn-sm"><i class="fas fa-calculator"></i>
+                                        
+                                Calcular
+                                
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-5">
+                    <div class="container" align="left">
+                        <p class="h4">Recuerde que: </p>
+                        <p class="h5"> La distribución binomial negativa esta dada por la fórmula: </p>
+                        $$ P(Y =y) = {y - 1 \choose r - 1}p^rq^{y-r}$$
+                        <p class="h5">donde:</p>
+                        <ul>
+                            <li><p class="h5"><i>p: probabilidad de éxito.</i></p></li>
+                            <li><p class="h5"><i>P: probabilidad de un evento.</i></p></li>
+                            <li><p class="h5"><i>Y: variable aleatoria discreta.</i></p></li>
+                            <li><p class="h5"><i>y: número de éxitos.</i></p></li>
+                            <li><p class="h5"><i>q: probabilidad de fracaso = 1-p.</i></p></li>
+                            <li><p class="h5"><i>r: r-ésimo éxito.</i></p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="container" align="left">
+                        <p class="h5">Restricciones:</p>
+                        $$ Y \ge r$$
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script>
+
+    window.sr = ScrollReveal();
+         sr.reveal('.body-profile',{
+             duration: 1000,
+             origin: 'bottom'
+         });
+
+</script>
+{% endblock %}

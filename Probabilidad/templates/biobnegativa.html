@@ -1,0 +1,39 @@
+{% import 'bootstrap/wtf.html' as wtf %}
+{% extends 'layoutbnegativar.html' %}
+
+{% block body %}
+
+<div id="put-overflow" class="w-100">
+    <section class="py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-8">
+                    <br>
+                    <p class="h3 font-weight-bold mb-0">BIBLIOGRAFÍA: DISTRIBUCIÓN BINOMIAL NEGATIVA</p>
+                </div>
+            </div>
+            <hr color="black" size="3">
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="h5"><sup class="h6">[1]</sup>Galo Sánchez, J. R. (27 de Diciembre de 2016). Proyectodescartes.org/. Obtenido de https://proyectodescartes.org/iCartesiLibri/materiales_didacticos/EstadisticaProbabilidadInferencia/VAdiscreta/4_4DistribucionBinomialNegativa.html</p>
+                    <br>
+                    <p class="h5"><sup class="h6">[2]</sup>Romero, P., Collins, A., & Avilés, G. (25 de Septiembre de 2018). rstudio-pubs-static.s3.amazonaws. Obtenido de http://rstudio-pubs-static.s3.amazonaws.com/422121_fa98a2f423544ec4b18aa4c29c9c6724.html</p>
+                    <br>
+                    <p class="h5"><sup class="h6">[3]</sup>Universidad de Valencia. (2020). uv.es. Obtenido de https://www.uv.es/ceaces/base/modelos%20de%20probabilidad/binegativa.htm#:~:text=La%20distribuci%C3%B3n%20binomial%20negativa%20es,que%20procedan%20de%20esta%20manera.</p>
+                    <br>
+                    <p class="h5"><sup class="h6">[4]</sup>Wackerly, D. D., Mendenhall III, W., & Scheaffer, R. L. (2009). Estadística Matemática con Aplicaciones. México D.F: Cengage Learning Editores S.A.</p>
+                </div>
+            </div>
+            <br>
+            <p><i> desarrollado por - Juan Camilo Ramírez Rátiva 20181020089 </i></p>
+            <p><i> Universidad Distrital Francisco José de Caldas </i></p>
+        </div>
+    </section>
+</div>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+{% endblock %}

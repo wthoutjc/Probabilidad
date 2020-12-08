@@ -1,0 +1,48 @@
+{% import 'bootstrap/wtf.html' as wtf %}
+{% extends 'layoutpoisson.html' %}
+
+{% block body %}
+
+<div id="put-overflow" class="w-100">
+    <section class="py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-8">
+                    <br>
+                    <p class="h3 font-weight-bold mb-0">TEORÍA: DISTRIBUCIÓN DE POISSON</p>
+                </div>
+            </div>
+            <hr color="black" size="3">
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-11">
+                    <p class="h3"><strong>¿Qué es?<sup class="h6">[1]</sup></strong></p>
+                    <p class="h5" align="justify">La distribución de probabilidad de Poisson describe la probabilidad como un acontecimiento fortuito ocurrido en un tiempo o intervalo de espacio bajo las condiciones que la probabilidad de un acontecimiento ocurre es muy pequeña, pero el número de intentos es muy grande, entonces el evento actual ocurre algunas veces.</p>
+                    <br>
+                    <p class="h3"><strong>Función de probabilidad de Poisson<sup class="h6">[2]</sup></strong></p>
+                    <p class="h5" align="justify">Para un experimento de distribución de Poisson, sea λ la frecuencia de ocurrencia media de un evento y sea <i>y</i> el número de éxitos en un solo ensayo, entonces la probabilidad de obtener Y éxitos en n ensayos, está dada por la función de probabilidad P (Y = y)</p>
+                    $$ P(Y) = \frac{\lambda^y}{y!}e^{-\lambda}$$
+                    <p class="h3"><strong>Características</strong><sup class="h6">[3]</sup></p>
+                    <ul>
+                        <li><p class="h5" align="justify">El numero medio (promedio) de eventos en el espacio temporal o región especifica de interés, se le denomina comúnmente por la letra griega lambda (λ).</p></li>
+                        <li><p class="h5" align="justify">El numero de resultados que ocurren en un intervalo de tiempo o región específicos es independiente de el numero que ocurre en cualquier otro intervalo de tiempo o región.</p></li>
+                        <li><p class="h5" align="justify">La probabilidad de que un resultado muy diminuto ocurra en un intervalo de tiempo muy corto es proporcional a la longitud del intervalo de tiempo o al tamaño de la región.</p></li>
+                        <li><p class="h5" align="justify">La probabilidad de que mas de un resultado ocurra en intervalo de tiempo tan corto o en esa región tan pequeña es inapreciable, que se puede asignar el valor de 0.</p></li>
+                    </ul>
+                    <br>
+                    <p class="h3"><strong>Aplicaciones</strong><sup class="h6">[4]</sup></p>
+                    <p class="h5" align="justify">Las aplicaciones de la distribución de probabilidad de Poisson son muy diversas, podemos emplearla para la distribución de las llamadas telefónicas que llegan a un computador, para el análisis de la demanda de servicios en un hospital por parte de los pacientes, el numero de accidentes en un cruce, o como una de las aplicaciones realizadas por el analista Gerardo Ardila Duarte: “La aplicación de la distribución de Poisson en un sugerido sistema de alertas tempranas para la disminución del homicidio común en Colombia”.<sup class="h6">[5]</sup></p>
+                    <br>
+                </div>
+            </div>
+            <p><i> desarrollado por - Juan Camilo Ramírez Rátiva 20181020089 </i></p>
+            <p><i> Universidad Distrital Francisco José de Caldas </i></p>
+        </div>
+    </section>
+</div>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+{% endblock %}

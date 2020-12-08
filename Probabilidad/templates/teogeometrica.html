@@ -1,0 +1,51 @@
+{% import 'bootstrap/wtf.html' as wtf %}
+{% extends 'layoutgeometrica.html' %}
+
+{% block body %}
+
+<div id="put-overflow" class="w-100">
+    <section class="py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-8">
+                    <br>
+                    <p class="h3 font-weight-bold mb-0">TEORÍA: DISTRIBUCIÓN GEOMÉTRICA</p>
+                </div>
+            </div>
+            <hr color="black" size="3">
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-11">
+                    <p class="h3"><strong>¿Qué es?<sup class="h6">[1]</sup></strong></p>
+                    <p class="h5" align="justify">La variable aleatoria que comparte la distribución geométrica esta relacionada con ciertos aspectos de la distribución binomial, en cuanto a que los eventos de estos ensayos comprenden pruebas idénticas e independientes, que fluctúan en dos resultados posibles, éxito o fracaso.</p>
+                    <p class="h5" align="justify">Esta distribución geométrica se interpreta como una distribución de probabilidad discreta en la cual el número determinado Y del ensayo de Bernoulli necesaria para obtener un éxito, es decir, es un modelo adecuado para aquellos procesos en los que se repiten pruebas hasta la consecución del éxito a resultado deseado</p>
+                    <br>
+                    <p class="h3"><strong>Función de probabilidad geométrica</strong></p>
+                    <p class="h5" align="justify"> Para un experimento de distribución geométrica, sea p la probabilidad de un éxito y 1-p la probabilidad de un fracaso en un solo ensayo, entonces la probabilidad de obtener y éxitos en n ensayos, está dada por la función de probabilidad P(Y = y) </p>
+                    $$ p(Y = y) = q^{y-1}p$$
+                    <p class="h3"><strong>Características</strong><sup class="h6">[2]</sup></p>
+                    <ul>
+                        <li><p class="h5" align="justify">El proceso consta de un número no definido de pruebas o experimentos separados o separables. El proceso concluirá cuando se obtenga por primera vez el resultado deseado.</p></li>
+                        <li><p class="h5" align="justify">Cada prueba puede dar dos resultados mutuamente excluyentes, éxito o fracaso.</p></li>
+                        <li><p class="h5" align="justify">La probabilidad de obtener un resultado exitoso en cada prueba es p y la de un fracaso es q.</p></li>
+                        <li><p class="h5" align="justify">La distribución geométrica carece de memoria, es decir, si intentamos repetir el experimento hasta el primer éxito, entonces, dado que el primer éxito todavía no ha ocurrido, la distribución de ensayos adicionales no depende de cuantos fallos se hayan observado.</p></li>
+                        <li><p class="h5" align="justify">La varianza esta determinada por la ecuación:</p></li>
+                        $$ var(Y) = \frac{1-p}{p^2}$$
+                    </ul>
+                    <br>
+                    <p class="h3"><strong>Aplicaciones</strong><sup class="h6">[3]</sup></p>
+                    <p class="h5" align="justify">La distribución geométrica se utiliza en la distribución de tiempos de espera, de manera que si los ensayos se realizan a intervalos regulares de tiempo, esta variable aleatoria proporciona el tiempo transcurrido hasta el primer éxito.</p>
+                    <br>
+                </div>
+            </div>
+            <p><i> desarrollado por - Juan Camilo Ramírez Rátiva 20181020089 </i></p>
+            <p><i> Universidad Distrital Francisco José de Caldas </i></p>
+        </div>
+    </section>
+</div>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+{% endblock %}
